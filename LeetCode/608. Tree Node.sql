@@ -6,7 +6,8 @@ SELECT pa.id,
 	END AS type 
 FROM Tree pa LEFT JOIN Tree ch 
 ON pa.id = ch.p_id 
-GROUP BY pa.id;
+GROUP BY pa.id
+ORDER BY pa.id;
 
 SELECT DISTINCT pa.id, 
 	CASE 
@@ -15,4 +16,5 @@ SELECT DISTINCT pa.id,
 	ELSE 'Inner' 
 	END AS type 
 FROM Tree pa LEFT JOIN Tree ch 
-ON pa.id = ch.p_id;
+ON pa.id = ch.p_id
+ORDER BY pa.id;
